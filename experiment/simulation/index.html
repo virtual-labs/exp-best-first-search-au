@@ -1,13 +1,127 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+<html lang="en">
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Create custom/random graphs,find path between nodes using best first search." />
+    <meta name="keywords"
+        content="graph visualization, best-first-search, path-finding" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Graph Visualization</title>
+     <script type="text/javascript" src="/graph-visualization-main/vis-network.min/vis-network.min.js" ></script>
+    <script type="module" src="js/draw.js"></script>
+ 
+    <script type="module" src="js/nodeElement.js" defer></script>
+    <script type="module" src="js/priorityQueue.js" defer></script>
+    <script type="module" src="js/utils.js" defer></script>
+    <script type="module" src="js/graph.js" defer></script>
+    <script type="module" src="js/graph.js" defer></script>
+    <script type="module" src="js/user.js" defer></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+
+<body>
+    <div class="container">
+        <div id="controls">
+            
+        <div class="radio">
+        <div class="ran">
+            <input type="radio" name="mode" value="random" id="randomRadio" checked>
+            <label for="randomRadio">Random</label>
+        </div >
+
+        <div class="cus">
+            <input type="radio" name="mode" value="custom" id="customRadio"> 
+            <label for="customRadio">Custom</label> 
+        </div>
+        </div>
+
+            <div class="ud">
+                <div class= "undire">
+                    <input type="radio" name="edgeType" value="undirected" id="undirectedRadio" >
+                    <label for="undirectedRadio"> Undirected edge</label>
+                </div>
+
+                <div class="dire">
+                    <input type="radio" name="edgeType" value="directed" id="directedRadio" checked> 
+                    <label for="directedRadio"> Directed edge </label> 
+                </div>                                
+            </div>
+
+            <div class="info"id="info"></div>
+
+            <div class="rand1">
+
+                <label for="numNodes">Number of nodes:</label>
+                <input type="number" id="numNodes" min="1" required title="Enter a number">
+            </div>
+
+                <div class="rc">
+                    <button id="generate">Create graph</button>
+                    
+                </div>
+
+                <div class="nod1">
+
+                <div >
+
+                    <label for="start-node">Start Node :</label>
+                    <input type="text" name="message" id="start-node" pattern="[A-Za-z]+" required title="Please enter an alphabet">
+                </div>
+                
+
+                <div  class="nod2">
+              
+                    <label for="end-node">End Node :</label>
+                    <input type="text" name="message" id="end-node" pattern="[A-Za-z]+" required title="Please enter an alphabet">
+                </div>
+
+            </div>
+
+                <div class="tb">
+                    <button id="tableButton" data-clicked="false">Add heuristic</button>
+                </div>
+                
+                <!-- code to create a table with columns -->
+                <div class="table-scroll">
+                <table class="table-container">
+                    <thead>
+                        <tr>
+                            <th>Node</th>
+                            <th>H (n)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table">
+                    </tbody>
+                </table>  
+            </div>
+
+            <div class="rs">
+                <button id="submit" data-clicked="false">save</button>
+                <button id="bestFirstSearchButton" data-clicked="false" >Search</button>
+            </div>
+
+            <div class="sub">
+                <button id="clearCanvas" data-clicked="false">Reset</button>
+            </div>
+
+        </div>
+
+        <div id="mynetwork" style="border:2px solid #000000;">
+          
+        </div>
+
+        <div id="display-panel">
+            <div id="top">
+                <h1 style="font-family:sans-serif;">Operations</h1>
+            </div>
+            <div id="operations"></div>
+        </div>
+        
+    </div>
+
+    <script type="module" src="js/indexx.js" defer></script>
 </body>
 </html>
