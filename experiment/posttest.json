@@ -1,39 +1,71 @@
 {
-  "version": 2.0,
-  "questions": [
+    "version": 2.0,
+    "questions": [
     {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+    "question": "What is the goal of the Best First Search algorithm?",
+    "answers": {
+    "a": "To find the longest path in a graph",
+    "b": "To find the path with the highest total weight in a graph",
+    "c": "To find the path with the lowest total weight in a graph",
+    "d": "To find the path that visits the most nodes in a graph"
+    },
+    "correctAnswer": "c",
+    "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
+    "question": "What data structure is typically used to implement the frontier in Best First Search?",
+    "answers": {
+    "a": "Stack",
+    "b": "Queue",
+    "c": "Priority Queue",
+    "d": "Heap"
+    },
+    "correctAnswer": "c",
+    "difficulty": "beginner"
+    },
+    {
+    "question": "Which heuristic function can be used in Best First Search to ensure admissibility?",
+    "answers": {
+    "a": "The Euclidean distance between the current node and the goal node",
+    "b": "The number of nodes explored so far",
+    "c": "The sum of the weights of the edges in the path so far",
+    "d": "The maximum weight of the edges in the path so far"
+    },
+    "correctAnswer": "a",
+    "difficulty": "intermediate"
+    },
+    {
+    "question": "What is the time complexity of Best First Search in the worst case?",
+    "answers": {
+    "a": "O(n)",
+    "b": "O(n log n)",
+    "c": "O(n^2)",
+    "d": "O(2^n)"
+    },
+    "correctAnswer": "d",
+    "difficulty": "intermediate"
+    },
+    {
+    "question": "What is a drawback of using Best First Search?",
+    "answers": {
+    "a": "It always finds the optimal solution",
+    "b": "It can get stuck in local minima",
+    "c": "It is not guaranteed to find a solution",
+    "d": "It requires a large amount of memory"
+    },
+    "correctAnswer": "b",
+    "difficulty": "intermediate"
+    },
+    {
+        "question": "In Best First Search, how are nodes selected for expansion?",
+        "answers": {
+        "a": "Nodes are selected in a random order",
+        "b": "Nodes are selected based on their depth in the graph",
+        "c": "Nodes are selected based on a heuristic function",
+        "d": "Nodes are selected based on their parent nodes"
+        },
+        "correctAnswer": "c",
+        "difficulty": "intermediate"
+        }
+    ]
 }
