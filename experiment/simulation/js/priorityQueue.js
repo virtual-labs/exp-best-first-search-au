@@ -56,4 +56,5 @@ export default class PriorityQueue {
 			str += this.items[i].nodeName + ' ';
 		return str;
 	}
+	
 }

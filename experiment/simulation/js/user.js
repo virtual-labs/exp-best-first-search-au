@@ -18,7 +18,7 @@ export default class User {
        
     }
 
-    bestFirstSearchrandom(startNode, endNode,nodesrandom,edgesrandom) {
+    bestFirstSearchrandom(startNode, endNode,nodesrandom,edgesrandom, isDirected = false) {
       var visited = {};
       if (nodesrandom && nodesrandom.length > 0) {
         var nodes = nodesrandom.filter(node => node != null).map(node => ({id: node.id}));
@@ -49,10 +49,10 @@ export default class User {
         if (first.node.id == endNode.id) {
           break;
         }
-        var edges = edgesrandom.filter(e => e.from === first.node.id || e.to === first.node.id);
+        var edges = edgesrandom.filter(e => e.from === first.node.id || (!isDirected && e.to === first.node.id));
         console.log(edges,"edges");
         var neighbors = edges.map(edge => {
-          var neighborId = edge.from === first.node.id ? edge.to : edge.from;
+          var neighborId = !isDirected && edge.to === first.node.id ? edge.from : edge.to;
           return nodesrandom.find(n => n.id === neighborId);
         }); 
 
@@ -63,22 +63,30 @@ export default class User {
         for (var neighbor of neighbors) {
           if (!visited[neighbor.id]) {
             visited[neighbor.id] = true;
-            var neighborPriority = this.getNodeValue(neighbor.id);
+            var neighborPriority = this.getNodeValue(neighbor.id, isDirected ? 'source' : 'target');
             console.log(neighborPriority,"neighborPriority");
             pq.enqueue(neighbor, neighborPriority);
           }
         }
       }
+      if (path[path.length - 1] != endNode.id) {
+        // end node not reached, return null or throw an error
+        return null;
+      }
       ret.push(endNode.id);
       return ret;
     }
-    getNodeValue(nodeId) {
+    getNodeValue(nodeId, direction = 'target') {
       var node = nodesrandom.find(n => n.id === nodeId);
       if (node) {
+        if (direction === 'source' && node.sourceValue != undefined) {
         return node.value;
       } else {
-        throw new Error('Invalid node ID');
+        return node.targetValue || node.value;
       }
+    } else {
+      throw new Error('Invalid node ID');
+    }
     }
     
     }
