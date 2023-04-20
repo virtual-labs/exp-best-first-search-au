@@ -19,7 +19,7 @@ export default class Graph {
     //   console.log(this.nodes,"this.nodes");
     // }
   
-    bestFirstSearch(startNode, endNode,nodesArray,edgesArray) {
+    bestFirstSearch(startNode, endNode,nodesArray,edgesArray,isDirected = false) {
       var visited = {};
       console.log(visited,"visited");
       if (nodesArray && nodesArray.length > 0) {
@@ -44,7 +44,7 @@ export default class Graph {
         var first = pq.front();
         console.log(first,"first");
 
-        var msg = 'Choose the Node with the highest priority, which is node <span class="highlight">' + first.node.label + '</span> with priority <span class="highlight">' + first.priority + '</span>';
+        var msg = 'Select the Node with the highest priority, which is node <span class="highlight">' + first.node.label + '</span> with priority <span class="highlight">' + first.priority + '</span>';
         showOperation(msg);
         
 
@@ -52,39 +52,47 @@ export default class Graph {
         ret.push(first.node.id);
         pq.dequeue();
         if (first.node.id == endNode.id) {
+          console.log("entered yoooooooooo")
           break;
         }
-        var edges = edgesArray.filter(e => e.from === first.node.id || e.to === first.node.id);
+        var edges = edgesArray.filter(e => e.from === first.node.id || (!isDirected && e.to === first.node.id));
         console.log(edges,"edges");
         var neighbors = edges.map(edge => {
-          var neighborId = edge.from === first.node.id ? edge.to : edge.from;
+          var neighborId = !isDirected && edge.to === first.node.id ? edge.from : edge.to;
           return nodesArray.find(n => n.id === neighborId);
         }); 
 
         console.log(neighbors,"neighbors");
-        var msg = 'Move to node <span class="highlight">' + first.node.label + '</span> and its neighbours <span class="highlight">' + neighbors.map(n => n.label).join('</span> and <span class="highlight">') + '</span> to the list of nodes to be visited.';
+        var msg = 'Traverse to node <span class="highlight">' + first.node.label + '</span> and its neighbours <span class="highlight">' + neighbors.map(n => n.label).join('</span> and <span class="highlight">') + '</span> to the list of nodes to be visited.';
         showOperation(msg);
-
         for (var neighbor of neighbors) {
           if (!visited[neighbor.id]) {
             visited[neighbor.id] = true;
-            var neighborPriority = this.getNodeValue(neighbor.id);
+            var neighborPriority = this.getNodeValue(neighbor.id, isDirected ? 'source' : 'target');
             console.log(neighborPriority,"neighborPriority");
             pq.enqueue(neighbor, neighborPriority);
           }
         }
       }
+      if (path[path.length - 1] != endNode.id) {
+        // end node not reached, return null or throw an error
+        return null;
+      }
       ret.push(endNode.id);
       return ret;
     }
 
-    getNodeValue(nodeId) {
+    getNodeValue(nodeId, direction = 'target') {
       var node = nodesArray.find(n => n.id === nodeId);
       if (node) {
+        if (direction === 'source' && node.sourceValue != undefined) {
         return node.value;
       } else {
-        throw new Error('Invalid node ID');
+        return node.targetValue || node.value;
       }
+    } else {
+      throw new Error('Invalid node ID');
+    }
     }
     
     }

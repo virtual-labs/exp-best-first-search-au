@@ -10,7 +10,7 @@
         content="graph visualization, best-first-search, path-finding" />
     <link rel="stylesheet" href="css/main.css">
     <title>Graph Visualization</title>
-     <script type="text/javascript" src="/graph-visualization-main/vis-network.min/vis-network.min.js" ></script>
+     <script type="text/javascript" src="/vis-network.min/vis-network.min.js" ></script>
     <script type="module" src="js/draw.js"></script>
  
     <script type="module" src="js/nodeElement.js" defer></script>
@@ -19,10 +19,12 @@
     <script type="module" src="js/graph.js" defer></script>
     <script type="module" src="js/graph.js" defer></script>
     <script type="module" src="js/user.js" defer></script>
+
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
 
 <body>
+
     <div class="container">
         <div id="controls">
             
@@ -40,12 +42,12 @@
 
             <div class="ud">
                 <div class= "undire">
-                    <input type="radio" name="edgeType" value="undirected" id="undirectedRadio" >
+                    <input type="radio" name="edgeType" value="undirected" id="undirectedRadio" checked>
                     <label for="undirectedRadio"> Undirected edge</label>
                 </div>
 
                 <div class="dire">
-                    <input type="radio" name="edgeType" value="directed" id="directedRadio" checked> 
+                    <input type="radio" name="edgeType" value="directed" id="directedRadio"> 
                     <label for="directedRadio"> Directed edge </label> 
                 </div>                                
             </div>
@@ -59,7 +61,7 @@
             </div>
 
                 <div class="rc">
-                    <button id="generate">Create graph</button>
+                    <button id="generate" onclick=" generate();">Create graph</button>
                     
                 </div>
 
@@ -81,7 +83,7 @@
             </div>
 
                 <div class="tb">
-                    <button id="tableButton" data-clicked="false">Add heuristic</button>
+                    <button id="tableButton" data-clicked="false" disabled>Add heuristic</button>
                 </div>
                 
                 <!-- code to create a table with columns -->
@@ -90,7 +92,7 @@
                     <thead>
                         <tr>
                             <th>Node</th>
-                            <th>H (n)</th>
+                            <th>Heuristic</th>
                         </tr>
                     </thead>
                     <tbody id="table">
@@ -99,8 +101,8 @@
             </div>
 
             <div class="rs">
-                <button id="submit" data-clicked="false">save</button>
-                <button id="bestFirstSearchButton" data-clicked="false" >Search</button>
+                <button id="submit" data-clicked="false">Save</button>
+                <button id="bestFirstSearchButton" data-clicked="false">Search path</button>
             </div>
 
             <div class="sub">
@@ -121,7 +123,5 @@
         </div>
         
     </div>
-
-    <script type="module" src="js/indexx.js" defer></script>
 </body>
 </html>
