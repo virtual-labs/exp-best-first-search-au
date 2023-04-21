@@ -17,7 +17,7 @@ export default class Graph {
     //   this.nodes = new vis.DataSet(nodesArray);
     //   this.edges = new vis.DataSet(edgesArray);
     //   console.log(this.nodes,"this.nodes");
-    // }
+    // }'
   
     bestFirstSearch(startNode, endNode,nodesArray,edgesArray,isDirected = false) {
       var visited = {};
