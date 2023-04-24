@@ -328,6 +328,17 @@ body{
   color:#ffffff;
 }
 
+#submit:disabled{
+  background: #828df8;
+  color: #ffffff;
+  margin-left: 18%;
+  border-radius: 4px;
+  width: 25%;
+  height: 100%;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .hide {
   display: none;
 }

@@ -19,6 +19,17 @@
     <script type="module" src="js/graph.js" defer></script>
     <script type="module" src="js/graph.js" defer></script>
     <script type="module" src="js/user.js" defer></script>
+    <script>
+        function saveClicked() {
+  console.log("save clicked");
+  let k = document.getElementById('submit');
+  let q = document.getElementById('bestFirstSearchButton');
+  console.log(k);
+  k.disabled = true;
+  q.disabled = false;
+}
+
+    </script>
 
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
@@ -101,8 +112,8 @@
             </div>
 
             <div class="rs">
-                <button id="submit" data-clicked="false">Save</button>
-                <button id="bestFirstSearchButton" data-clicked="false">Search path</button>
+                <button id="submit" data-clicked="false" onclick="saveClicked()">Save</button>
+                <button id="bestFirstSearchButton" data-clicked="false" disabled>Search path</button>
             </div>
 
             <div class="sub">
