@@ -1,3 +1,3 @@
 ## Aim of the experiment
 
-The best first search is  an informed search that use an evaluation function to decide which adjacent is most promising and then explore.
+The best first search is  an informed search that evaluates and choose the right path at every succeeding step to reach the goal as quickly as possible.
