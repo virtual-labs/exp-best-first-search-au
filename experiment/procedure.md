@@ -1,10 +1,50 @@
-### Procedure
+<h3>Procedure</h3>
 
- 1. Choose an initiating node (eg. n) and place it in the OPEN list.*
- 2. In case the initiating node is empty, you must stop and return to failure.*
- 3. Eliminate the node from the OPEN list and place it on the CLOSE list. Here, the node is the lowest value of h(n), i.e., heuristic function.
- 4. Expand the node and create its successor.
- 5. Check each successor to see whether they are leading to the goal.
- 6. If a successor node leads to the goal, you must return success and terminate the search process. Or continue with step 7.
- 7. The algorithm analyzes every successor  for the evaluation function f(n). It examines whether the nodes are in the OPEN or CLOSED list.In case they do not find the node in either list, it adds them to the OPEN list.
- 8. Return to step 2 and iterate 
+<h6>For Directed Graph:</h6>
+<ol>
+<li>Initialization:</li>
+<ul><li>Choose the directed graph option.</li>
+<li>Select whether to create random or custom graph.</li>
+<li>Enter the number of nodes needed.</li>
+<li>Click on the "Generate Graph" button to create the directed graph.</li>
+</ul>
+<li>Add Heuristic:</li>
+<ul><li>
+Optionally, add heuristic values to each node to estimate its distance to the goal node.</li></ul>
+<li>Specify Start and End Goals:</li>
+<ul><li>
+Mention the start and end goal nodes in the provided input fields.</li></ul>
+<li>Search Path:</li>
+<ul><li>
+Click on the "Search Path" button to initiate the Best-First Search algorithm.</li></ul>
+<li>View Results:</li>
+<ul><li>
+Once the algorithm completes, the optimal path from the start to the goal node will be displayed.</li></ul>
+<li>Reset:</li>
+<ul><li>
+If needed, use the "Reset" button to clear the graph and start over.</li></ul>
+
+<h6>For UnDirected Graph:</h6>
+<ol>
+<li>Initialization:</li>
+<ul><li>Choose the Undirected graph option.</li>
+<li>Select whether to create random or custom graph.</li>
+<li>Enter the number of nodes needed.</li>
+<li>Click on the "Generate Graph" button to create the directed graph.</li>
+</ul>
+<li>Add Heuristic:</li>
+<ul><li>
+Optionally, add heuristic values to each node to estimate its distance to the goal node.</li></ul>
+<li>Specify Start and End Goals:</li>
+<ul><li>
+Mention the start and end goal nodes in the provided input fields.</li></ul>
+<li>Search Path:</li>
+<ul><li>
+Click on the "Search Path" button to initiate the Best-First Search algorithm.</li></ul>
+<li>View Results:</li>
+<ul><li>
+Once the algorithm completes, the optimal path from the start to the goal node will be displayed.</li></ul>
+<li>Reset:</li>
+<ul><li>
+If needed, use the "Reset" button to clear the graph and start over.</li></ul>
+</ol>
