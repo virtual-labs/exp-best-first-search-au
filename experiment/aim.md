@@ -1,3 +1,3 @@
-## Aim of the experiment
+<h2> Aim of the experiment</h2>
 
-The best first search is  an informed search that evaluates and choose the right path at every succeeding step to reach the goal as quickly as possible.
+The aim of this experiment is to implement and evaluate the effectiveness of the Best-First Search algorithm in finding the optimal path from a start node to a goal node in a graph
