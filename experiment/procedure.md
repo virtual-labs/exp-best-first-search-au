@@ -1,6 +1,6 @@
 <h3>Procedure</h3>
 
-<h6>For Directed Graph:</h6>
+<h5>For Directed Graph:</h5>
 <ol>
 <li>Initialization:</li>
 <ul><li>Choose the directed graph option.</li>
@@ -23,8 +23,8 @@ Once the algorithm completes, the optimal path from the start to the goal node w
 <li>Reset:</li>
 <ul><li>
 If needed, use the "Reset" button to clear the graph and start over.</li></ul>
-
-<h6>For UnDirected Graph:</h6>
+</ol>
+<h5>For UnDirected Graph:</h5>
 <ol>
 <li>Initialization:</li>
 <ul><li>Choose the Undirected graph option.</li>

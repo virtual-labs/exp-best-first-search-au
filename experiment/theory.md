@@ -3,7 +3,7 @@
 
 <p>Best-First Search is an informed search algorithm that explores a search space by prioritizing nodes based on a heuristic evaluation function. It begins at the start node and selects the most promising node to explore next, guided by the heuristic estimate of each node's proximity to the goal. This process continues iteratively until the goal node is reached or no more nodes remain to explore. </p>
 
-<h6>Best-First Search algorithm:</h6>
+<h5>Best-First Search algorithm:</h5>
 <ol>
 <li>Initialization:</li>
 <ul><li> Begin at the start node.</li>
