@@ -2,35 +2,67 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Which of the following algorithms is a variant of Best-First Search?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "A* algorithm",
+        "b": "Breadth-First Search",
+        "c": "Depth-First Search",
+        "d": "Greedy algorithm"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What is the main idea behind Best-First Search?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To systematically explore all possible paths in a graph",
+        "b": "To always choose the shortest path to the goal node",
+        "c": "To use heuristics to prioritize nodes closer to the goal",
+        "d": "To randomly choose a path until the goal node is reached"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is a heuristic used in Best-First Search?",
+      "answers": {
+        "a": "Depth of the node in the search tree",
+        "b": "Cost of the path from start node to current node",
+        "c": "Estimated cost from the current node to the goal node",
+        "d": "Number of neighbors of the current node"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the main advantage of Best-First Search over Breadth-First Search?",
+      "answers": {
+        "a": "Guaranteed to find the optimal solution",
+        "b": "Uses less memory than BFS",
+        "c": "Can search in infinite spaces",
+        "d": "Faster exploration by focusing on promising nodes"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is NOT a part of Best-First Search?",
+      "answers": {
+        "a": "Heuristic Function",
+        "b": "Open List",
+        "c": "Closed List",
+        "d": "Depth Limit"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the primary goal of Best-First Search?",
+      "answers": {
+        "a": "To find the shortest path from start to end node",
+        "b": "To explore all possible paths",
+        "c": "To find the most efficient path to the goal using heuristics",
+        "d": "To avoid revisiting previously explored nodes"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"

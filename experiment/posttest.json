@@ -2,38 +2,70 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the primary goal of Best-First Search?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "To find the longest path in a graph",
+        "b": "To find the path with the highest total weight",
+        "c": "To find the most efficient path to the goal using heuristics",
+        "d": "To visit the maximum number of nodes"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "Which data structure is typically used to implement the frontier in Best-First Search?",
+      "answers": {
+        "a": "Stack",
+        "b": "Queue",
+        "c": "Priority Queue",
+        "d": "Heap"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which heuristic ensures admissibility in Best-First Search?",
+      "answers": {
+        "a": "Euclidean distance from current node to goal",
+        "b": "Number of nodes explored so far",
+        "c": "Sum of edge weights along the path so far",
+        "d": "Maximum weight of edges in the path so far"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the worst-case time complexity of Best-First Search?",
+      "answers": {
+        "a": "O(n)",
+        "b": "O(n log n)",
+        "c": "O(n^2)",
+        "d": "O(2^n)"
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is a potential drawback of Best-First Search?",
+      "answers": {
+        "a": "It always finds the optimal solution",
+        "b": "It can get stuck in local minima if heuristic is misleading",
+        "c": "It is not guaranteed to find a solution",
+        "d": "It requires excessive memory for small graphs"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How are nodes selected for expansion in Best-First Search?",
+      "answers": {
+        "a": "Random order",
+        "b": "Based on depth in the search tree",
+        "c": "Based on heuristic function values",
+        "d": "Based on parent nodes"
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
     }
   ]
 }
