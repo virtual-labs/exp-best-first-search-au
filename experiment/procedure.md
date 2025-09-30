@@ -1,50 +1,17 @@
-<h3>Procedure</h3>
 
-<h5>For Directed Graph:</h5>
-<ol>
-<li>Initialization:</li>
-<ul><li>Choose the directed graph option.</li>
-<li>Select whether to create random or custom graph.</li>
-<li>Enter the number of nodes needed.</li>
-<li>Click on the "Generate Graph" button to create the directed graph.</li>
+
+<ul>
+  <li>
+    This simulation visualizes the <strong>Best-First Search algorithm</strong> 
+    to find the optimal path between ten interconnected cities.  Select a <strong>source</strong> and <strong>destination</strong>, 
+    and the algorithm will determine the most efficient route 
+    based on <strong>heuristic values</strong>.
+      <li>The heuristic value represents the estimated straight-line distance from each city to the destination city.
+    
+  </li>
+  <li>Choose the <strong>source city</strong> from the dropdown list of 10 cities.</li>
+  <li>Choose the <strong>destination city</strong> from the dropdown list of 10 cities.</li>
+  <li>Click the <strong>Add Heuristic</strong> button to input the heuristic value for each city relative to the destination.</li>
+  <li>Click the <strong>Find Path</strong> button to find the heuristic path between the selected cities.</li>
+  <li>Observe the <strong>Graph View</strong> and <strong>Map View</strong> to analyze the results.</li>
 </ul>
-<li>Add Heuristic:</li>
-<ul><li>
-Optionally, add heuristic values to each node to estimate its distance to the goal node.</li></ul>
-<li>Specify Start and End Goals:</li>
-<ul><li>
-Mention the start and end goal nodes in the provided input fields.</li></ul>
-<li>Search Path:</li>
-<ul><li>
-Click on the "Search Path" button to initiate the Best-First Search algorithm.</li></ul>
-<li>View Results:</li>
-<ul><li>
-Once the algorithm completes, the optimal path from the start to the goal node will be displayed.</li></ul>
-<li>Reset:</li>
-<ul><li>
-If needed, use the "Reset" button to clear the graph and start over.</li></ul>
-</ol>
-<h5>For UnDirected Graph:</h5>
-<ol>
-<li>Initialization:</li>
-<ul><li>Choose the Undirected graph option.</li>
-<li>Select whether to create random or custom graph.</li>
-<li>Enter the number of nodes needed.</li>
-<li>Click on the "Generate Graph" button to create the directed graph.</li>
-</ul>
-<li>Add Heuristic:</li>
-<ul><li>
-Optionally, add heuristic values to each node to estimate its distance to the goal node.</li></ul>
-<li>Specify Start and End Goals:</li>
-<ul><li>
-Mention the start and end goal nodes in the provided input fields.</li></ul>
-<li>Search Path:</li>
-<ul><li>
-Click on the "Search Path" button to initiate the Best-First Search algorithm.</li></ul>
-<li>View Results:</li>
-<ul><li>
-Once the algorithm completes, the optimal path from the start to the goal node will be displayed.</li></ul>
-<li>Reset:</li>
-<ul><li>
-If needed, use the "Reset" button to clear the graph and start over.</li></ul>
-</ol>
